@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:apptwo/news.dart';
+import 'package:splashscreen/splashscreen.dart';
+import 'dart:async';
 
 //import 'package:apptwo/navigation.dart';
 
@@ -15,6 +17,13 @@ class _Page3State extends State<Page3> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     _tabController = TabController(length: 2, vsync: this);
+    Timer(
+        Duration(seconds:3),
+        () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Login(),
+            )));
     super.initState();
   }
 

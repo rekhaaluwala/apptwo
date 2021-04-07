@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:apptwo/Home.dart';
+import 'package:apptwo/welcome.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         //backgroundColor: Colors.purple[100],
-        body: Home(),
+        body: Welcome(),
       ),
     );
   }

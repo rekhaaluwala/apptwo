@@ -1,5 +1,8 @@
+import 'package:apptwo/welcome.dart';
 import 'package:flutter/material.dart';
 import 'package:apptwo/inputdesign.dart';
+import 'package:splashscreen/splashscreen.dart';
+import 'dart:async';
 
 class Login extends StatefulWidget {
   @override
@@ -14,6 +17,17 @@ class _LoginState extends State<Login> {
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
 
   @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Welcome(),
+            )));
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
